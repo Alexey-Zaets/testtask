@@ -2,7 +2,7 @@ FROM python:3.7.0
 
 # set up usefull staff
 RUN apt-get update
-RUN apt-get install -y curl coreutils wget net-tools htop iotop less iputils-ping
+RUN apt-get install -y curl coreutils wget net-tools htop iotop less iputils-ping gettext
 
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools

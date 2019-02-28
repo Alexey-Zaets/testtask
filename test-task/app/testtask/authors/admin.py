@@ -5,8 +5,11 @@ from .models import Author
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Автор', {
-            'fields': (('first_name', 'last_name'), ('birthday', 'sex')),
+        ('Author', {
+            'fields': (
+                ('first_name', 'last_name'),
+                ('birthday', 'sex')
+            ),
         }),
     ]
     ordering = ['last_name']

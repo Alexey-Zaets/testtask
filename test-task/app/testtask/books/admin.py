@@ -5,8 +5,12 @@ from .models import Book
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Книга', {
-            'fields':(('title', 'isbn'),('genre', 'pub_date'), 'authors'),
+        ('Book', {
+            'fields':(
+                ('title', 'isbn'),
+                ('genre', 'pub_date'), 
+                'authors'
+            ),
         }),
     ]
     ordering = ['pub_date', 'title']

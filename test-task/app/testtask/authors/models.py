@@ -2,14 +2,14 @@ from django.db import models
 
 # Create your models here.
 class Author(models.Model):
-    first_name = models.CharField('Имя', max_length=60)
-    last_name = models.CharField('Фамилия', max_length=60)
+    first_name = models.CharField('First name', max_length=60)
+    last_name = models.CharField('Last name', max_length=60)
     sex = models.CharField(
-        'Пол',
+        'Sex',
         max_length=1,
-        choices=(('М', 'Мужской'),('Ж', 'Женский'))
+        choices=(('M', 'Man'),('W', 'Woman'))
     )
-    birthday = models.DateField('Дата рождения')
+    birthday = models.DateField('Birthday')
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
